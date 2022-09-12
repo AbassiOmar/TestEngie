@@ -5,9 +5,11 @@ le projet est une Api rest serveless  azurefonction qui contient deux endpoints
  - RegularExpressionApi
  - GetHistorySearchApi
  
-  - pour le déployement sur azure il faut un plan App Service
+  
+ =>pour le déployement sur azure il faut un plan App Service
   
  pour tester l'application en local 
+ 
  - ouvrir le projet avec vs
  - démarrer l'application (F5)
  - tester avec postman
