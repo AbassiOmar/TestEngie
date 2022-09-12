@@ -12,12 +12,12 @@ namespace RegExApi.Services
     public class RegExStrategy:IRegExStrategy
     {
 		private readonly IEnumerable<IRegularExpressionService> _regExServices;
-		private readonly IMemoryCache memoryCache;
+		private readonly IMemoryCache _memoryCache;
 		public RegExStrategy(IEnumerable<IRegularExpressionService> regExServices,
 			IMemoryCache memoryCache)
 		{
 			_regExServices = regExServices;
-			this.memoryCache = memoryCache;
+			_memoryCache = memoryCache;
 		}
 
 	   public ResponseMatching Matching(string regEx, string text, List<char> flags, MatchingType matchingType, string substitution)
@@ -25,9 +25,8 @@ namespace RegExApi.Services
 			var response = _regExServices.FirstOrDefault(x => x.matchingType == matchingType)?.IsMatchRegExWithText(regEx, text, flags, matchingType, substitution) ?? throw new ArgumentNullException(nameof(matchingType));
 			if(response !=null )
             {
-
-				_ = this.memoryCache?.Set("Matching - " + DateTime.UtcNow, response) ??
-                    throw new ArgumentNullException(nameof(memoryCache));
+				if (_memoryCache != null)
+					_memoryCache.Set("Matching - " + DateTime.UtcNow, response);
 			}
 			return response;
 		}

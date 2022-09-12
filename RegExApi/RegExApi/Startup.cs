@@ -14,7 +14,7 @@ namespace RegExApi
 
         public override void Configure(IFunctionsHostBuilder builder)
         {
-            builder.Services.AddScoped<IRegExStrategyFactory, RegExStrategyFactory>();
+            //builder.Services.AddScoped<IRegExStrategyFactory, RegExStrategyFactory>();
             builder.Services.AddScoped<IRegularExpressionService, ValidateRegExWithSubstitution>();
             builder.Services.AddScoped<IRegularExpressionService, ValidateRegEXWithOptionsFlag>();
             builder.Services.AddScoped<IRegularExpressionService, ValidateRegEXBasic>();

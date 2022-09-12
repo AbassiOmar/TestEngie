@@ -13,10 +13,8 @@ namespace RegExApi.Services
 {
     public class ValidateRegExWithSubstitution : BaseValidateRegEx,IRegularExpressionService
     {
-        private readonly IMemoryCache memoryCache;
-        public ValidateRegExWithSubstitution(IMemoryCache memoryCache)
+        public ValidateRegExWithSubstitution()
         {
-            this.memoryCache = memoryCache;
         }
         public MatchingType matchingType => MatchingType.WithsSubstitution;
 
@@ -32,7 +30,6 @@ namespace RegExApi.Services
             responseMatching.NombreMatching = matches.Count;
             responseMatching.TextAfterSubstitution = replacedText;
             responseMatching.MatchingInformations = GetResponseMatchingFromMatchCollection(matches);
-           // this.memoryCache.Set("Matching - "+DateTime.UtcNow, responseMatching);
             return responseMatching;
         }
     }

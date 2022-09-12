@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\omara\\source\\repos\\RegExApi\\RegExModels\\RegExModels.csproj": {}
+    "C:\\Users\\omara\\source\\TestEngie\\RegExApi\\RegExModels\\RegExModels.csproj": {}
   },
   "projects": {
-    "C:\\Users\\omara\\source\\repos\\RegExApi\\RegExModels\\RegExModels.csproj": {
+    "C:\\Users\\omara\\source\\TestEngie\\RegExApi\\RegExModels\\RegExModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\omara\\source\\repos\\RegExApi\\RegExModels\\RegExModels.csproj",
+        "projectUniqueName": "C:\\Users\\omara\\source\\TestEngie\\RegExApi\\RegExModels\\RegExModels.csproj",
         "projectName": "RegExModels",
-        "projectPath": "C:\\Users\\omara\\source\\repos\\RegExApi\\RegExModels\\RegExModels.csproj",
+        "projectPath": "C:\\Users\\omara\\source\\TestEngie\\RegExApi\\RegExModels\\RegExModels.csproj",
         "packagesPath": "C:\\Users\\omara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\omara\\source\\repos\\RegExApi\\RegExModels\\obj\\",
+        "outputPath": "C:\\Users\\omara\\source\\TestEngie\\RegExApi\\RegExModels\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\omara\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -8,3 +8,13 @@ C:\Users\omara\source\repos\RegExApi\RegExModels\obj\Debug\netcoreapp3.1\RegExMo
 C:\Users\omara\source\repos\RegExApi\RegExModels\obj\Debug\netcoreapp3.1\RegExModels.csproj.CoreCompileInputs.cache
 C:\Users\omara\source\repos\RegExApi\RegExModels\obj\Debug\netcoreapp3.1\RegExModels.dll
 C:\Users\omara\source\repos\RegExApi\RegExModels\obj\Debug\netcoreapp3.1\RegExModels.pdb
+C:\Users\omara\source\TestEngie\RegExApi\RegExModels\bin\Debug\netcoreapp3.1\RegExModels.deps.json
+C:\Users\omara\source\TestEngie\RegExApi\RegExModels\bin\Debug\netcoreapp3.1\RegExModels.dll
+C:\Users\omara\source\TestEngie\RegExApi\RegExModels\bin\Debug\netcoreapp3.1\RegExModels.pdb
+C:\Users\omara\source\TestEngie\RegExApi\RegExModels\obj\Debug\netcoreapp3.1\RegExModels.csproj.AssemblyReference.cache
+C:\Users\omara\source\TestEngie\RegExApi\RegExModels\obj\Debug\netcoreapp3.1\RegExModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\omara\source\TestEngie\RegExApi\RegExModels\obj\Debug\netcoreapp3.1\RegExModels.AssemblyInfoInputs.cache
+C:\Users\omara\source\TestEngie\RegExApi\RegExModels\obj\Debug\netcoreapp3.1\RegExModels.AssemblyInfo.cs
+C:\Users\omara\source\TestEngie\RegExApi\RegExModels\obj\Debug\netcoreapp3.1\RegExModels.csproj.CoreCompileInputs.cache
+C:\Users\omara\source\TestEngie\RegExApi\RegExModels\obj\Debug\netcoreapp3.1\RegExModels.dll
+C:\Users\omara\source\TestEngie\RegExApi\RegExModels\obj\Debug\netcoreapp3.1\RegExModels.pdb

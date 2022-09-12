@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0//OsYgHMDhXt+5btgwjTxQIjB2KhU59UElzE+4UiqdbETLT3hVOm56e9NZjI8R1bA8N0bhAP5C/IJSXS+L12Q==",
+  "dgSpecHash": "QYIHl5aOiPsBerktEkCo7P7kRedy/Y95+rIDdn9tPWNGQtmEXrojCUZ4a0+4EojNuUNN9BxbLmC5CIR9ES80mA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\omara\\source\\repos\\RegExApi\\ServicesRegEx\\ServicesRegEx.csproj",
+  "projectFilePath": "C:\\Users\\omara\\source\\TestEngie\\RegExApi\\ServicesRegEx\\ServicesRegEx.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

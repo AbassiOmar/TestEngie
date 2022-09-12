@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\omara\\source\\repos\\RegExApi\\ServicesRegEx\\ServicesRegEx.csproj",
+      "projectUniqueName": "C:\\Users\\omara\\source\\TestEngie\\RegExApi\\ServicesRegEx\\ServicesRegEx.csproj",
       "projectName": "ServicesRegEx",
-      "projectPath": "C:\\Users\\omara\\source\\repos\\RegExApi\\ServicesRegEx\\ServicesRegEx.csproj",
+      "projectPath": "C:\\Users\\omara\\source\\TestEngie\\RegExApi\\ServicesRegEx\\ServicesRegEx.csproj",
       "packagesPath": "C:\\Users\\omara\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\omara\\source\\repos\\RegExApi\\ServicesRegEx\\obj\\",
+      "outputPath": "C:\\Users\\omara\\source\\TestEngie\\RegExApi\\ServicesRegEx\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\omara\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\omara\\source\\repos\\RegExApi\\RegExModels\\RegExModels.csproj": {
-              "projectPath": "C:\\Users\\omara\\source\\repos\\RegExApi\\RegExModels\\RegExModels.csproj"
+            "C:\\Users\\omara\\source\\TestEngie\\RegExApi\\RegExModels\\RegExModels.csproj": {
+              "projectPath": "C:\\Users\\omara\\source\\TestEngie\\RegExApi\\RegExModels\\RegExModels.csproj"
             }
           }
         }
