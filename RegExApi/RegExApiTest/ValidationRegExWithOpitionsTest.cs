@@ -19,7 +19,6 @@ namespace RegExApiTest
         private readonly Mock<ValidateRegEXWithOptionsFlag> _regExValidationWithOptions;
         private readonly Mock<ValidateRegEXWithoutOptions> _regExValidationWithoutOptions;
         private readonly Mock<ValidateRegExWithSubstitution> _regExValidationWithouSubstitution;
-        private readonly Mock<IMemoryCache> _memoryCache;
 
         public ValidationRegExWithOpitionsTest()
         {
@@ -28,7 +27,6 @@ namespace RegExApiTest
             _regExValidationWithOptions = new Mock<ValidateRegEXWithOptionsFlag>();
             _regExValidationWithoutOptions = new Mock<ValidateRegEXWithoutOptions>();
             _regExValidationWithouSubstitution = new Mock<ValidateRegExWithSubstitution>();
-            _memoryCache = new Mock<IMemoryCache>();
         }
         [Theory]
         [InlineData(MatchingType.WithOptionFlags, SeedDataTest.RegExPhoneNumberOk, SeedDataTest.RegExInputTextOk, SeedDataTest.RegExInputReplaceOk)]
@@ -44,14 +42,7 @@ namespace RegExApiTest
             listService.Add(_regExValidationWithoutOptions.Object);
             listService.Add(_regExValidationWithouSubstitution.Object);
            
-            var cachEntry = Mock.Of<ICacheEntry>();
-            Mock.Get(cachEntry).SetupGet(c => c.ExpirationTokens).Returns(new List<IChangeToken>());
-
-            _memoryCache
-                .Setup(m => m.CreateEntry(It.IsAny<object>()))
-                .Returns(cachEntry);
-
-            var strategy = new RegExStrategy(listService, _memoryCache.Object);
+            var strategy = new RegExStrategy(listService);
             var resultMatching = strategy.Matching(regex, text, flags, matchingType, substition);
            switch(matchingType)
             {
