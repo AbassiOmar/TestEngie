@@ -14,9 +14,11 @@ le projet est une Api rest serveless  azurefonction qui contient deux endpoints
  
 ## Reqûete 1 : 
  POST : 
- http://localhost:7071/api/RegularExpressionApi 
+ 
+  http://localhost:7071/api/RegularExpressionApi 
  
  paramètre dans body json : 
+ ```json
  {
     "MatchingType":"3", ==> enumération pour choisir le type de matching (0 :  basic ,1 :  sans flags,2 : avec flags ,3  : avec l'option de sibstitution)
      "RegEx":"(\\+33|0)?(\\d)?(\\d\\d)?(\\d\\d)?(\\d\\d)?(\\d\\d)",
@@ -24,12 +26,14 @@ le projet est une Api rest serveless  azurefonction qui contient deux endpoints
      "Flags" :["i"],
      "TextSubstitution":"****"
 }
+```
 
 Retour de la reqûete : 
+```json
 {
     "isMatch": true,
     "nombreMatching": 2,
-    "textAfterSubstitution": "**** abassi  ****",
+    "textAfterSubstitution": "****  phone number 2  ****",
     "matchingInformations": [
         {
             "idMatching": "Full Match",
@@ -133,10 +137,13 @@ Retour de la reqûete :
         }
     ]
 }
-
+```
 ## Reqûete 2: 
 Get : 
  http://localhost:7071/api/GetHistorySearchApi
+ 
 Retour : la liste de recherches précédentes
-##Conception 
+
+##Conception :
+
 ![testengie (1)](https://user-images.githubusercontent.com/16887977/189690378-27ce660a-783d-4c75-9475-9681a4b47a0f.jpg)
