@@ -16,12 +16,16 @@ namespace RegExApi
     public  class RegularExpressionApi
     {
         private readonly IRegExStrategy validateRegEX;
+        private readonly IPersistData persistData;  
         private readonly IMemoryCache memoryCache;
 
-        public RegularExpressionApi(IRegExStrategy validateRegEX, IMemoryCache memoryCache)
+        public RegularExpressionApi(IRegExStrategy validateRegEX,
+            IMemoryCache memoryCache,
+            IPersistData persistData)
         {
             this.validateRegEX = validateRegEX;
             this.memoryCache = memoryCache;
+            this.persistData = persistData;
         }
         [FunctionName("RegularExpressionApi")]
         public  async Task<IActionResult> Run(
@@ -31,8 +35,12 @@ namespace RegExApi
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             InputRegExModel inputService = JsonConvert.DeserializeObject<InputRegExModel>(requestBody);
-            var res = this.validateRegEX.Matching(inputService.RegEx, inputService.Text, inputService.Flags, inputService.MatchingType,inputService.TextSubstitution);
-            return new OkObjectResult(res);
+            var response = this.validateRegEX.Matching(inputService.RegEx, inputService.Text, inputService.Flags, inputService.MatchingType,inputService.TextSubstitution);
+            if(response!=null)
+            {
+                this.persistData.SetData(response);
+            }
+            return new OkObjectResult(response);
         }
     }
 }

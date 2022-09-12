@@ -12,49 +12,29 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Collections;
 using RegExModels.Models.Output;
+using ServicesRegEx;
 
 namespace RegExApi
 {
     public  class GetHistorySearchApi
     {
         private readonly IMemoryCache memoryCache;
-
-        public GetHistorySearchApi( IMemoryCache memoryCache)
+        private readonly IPersistData persistData;
+        public GetHistorySearchApi( IMemoryCache memoryCache,
+            IPersistData persistData)
         {
             this.memoryCache = memoryCache;
+            this.persistData = persistData;
         }
         [FunctionName("GetHistorySearchApi")]
         public  async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
             ILogger log)
         {
-            var keys = GetAllKeysList(this.memoryCache);
-            List<ResponseMatching> responseMatching = new List<ResponseMatching>(0);
-            foreach (var key in keys)
-            {
-                if(this.memoryCache.TryGetValue<ResponseMatching>(key, out ResponseMatching response))
-                {
-                    responseMatching.Add(response);
-                }
-
-            }
-
+            List<ResponseMatching> responseMatching = this.persistData.GetData();
             return new OkObjectResult(responseMatching);
         }
 
-        private static List<string> GetAllKeysList(IMemoryCache cache)
-        {
-            var field = typeof(MemoryCache).GetProperty("EntriesCollection", BindingFlags.NonPublic | BindingFlags.Instance);
-            var collection = field.GetValue(cache) as ICollection;
-            var items = new List<string>();
-            if (collection != null)
-                foreach (var item in collection)
-                {
-                    var methodInfo = item.GetType().GetProperty("Key");
-                    var val = methodInfo.GetValue(item);
-                    items.Add(val.ToString());
-                }
-            return items;
-        }
+       
     }
 }
